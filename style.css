@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2,h3
+{
+    margin: 5px;
+}
+.main_div
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height:50vh;
+    box-shadow: 7px 9px 6px grey;
+}
+.main_div .music_container{
+    margin:20px 0 0 20px;
+    width: 50%;
+    left: 30px;
+    text-align: center;
+}
+.music_container .controls
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+.music_container #tittle
+{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-weight: 500;
+    text-shadow: 3px 1px 3px grey;
+}
+.music_container #artist
+{
+    text-transform: uppercase;
+    color: rgb(179, 179, 132);
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-weight: 100;
+    text-shadow: 3px 1px 3px grey;
+    margin-bottom: 3rem;
+}
+.main_div .img_container
+{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_div .img_container #image
+{
+    border-radius: 50%;
+    width: 240px;
+    height:240px;
+    background-size: cover;
+    box-shadow: 3px 3px 20px black;
+}
+
+/* lower half part */
+
+.container2 .playlist_container
+{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: rgb(214, 210, 241);
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 7px 9px 6px grey;
+}
+.container2 .playlist_container .images1
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.container2 .playlist_container .cont2
+{
+    margin: 20px 40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container2 .playlist_container .cont2 .songs1
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container2 .playlist_container .cont2 #tittle
+{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-weight: 600;
+    text-shadow: 3px 1px 3px grey;
+    font-style: bold ;
+    
+}
+.container2 .playlist_container .cont2 .songs
+{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-weight: 50;
+    text-shadow: 3px 1px 3px grey;
+}
+.container2 .playlist_container .cont2 .songs:hover
+{
+    text-shadow: 3px 1px 3px black;
+    color: white;
+    font-style: bold;
+}
+.container2 .playlist_container .images1 img
+{
+    width: 15vw;
+    height: 30vh;
+    border-radius: 50%;
+    margin: 20px 3px;
+    background-size: cover;
+}
+.controls .play_button
+{
+    background-color:black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+#prev:hover,#next:hover
+{
+    color:black;
+    border-radius: 50%;
+    box-shadow: 0 1rem 2rem rgba(0,0, 0, 0.4);
+
+}
+.controls .play_button:hover{
+    background-color: rgb(214, 210, 241);
+    color:black;
+    box-shadow: 0 1rem 2rem rgba(0,0, 0, 0.4);
+}
+.anime
+{
+    animation: rotatePlayer 3s linear infinite;
+}
+.pause
+{
+    animation-play-state: paused;
+}
+@keyframes rotatePlayer{
+    from {transform: rotate(0deg);}
+    to{
+        transform: rotate(360deg);
+    }
+}
+@media (max-width:650px)
+{
+    .container2 .playlist_container .images1 .img
+    {
+        flex: 45%;
+        width: 40px;
+        height: 80px;
+        margin-top: 15px;
+        margin-left: 7px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    .main_div .img_container #image
+    {
+        width:160px;
+        height: 160px;
+    }
+    .music_container #tittle
+    {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+    .music_container #artist
+    {
+        font-size:10px ;
+    }
+
+}
+
